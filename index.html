@@ -15,7 +15,7 @@
     <div class="card">
         <h1>🛡️ acde.duckdns.org</h1>
         <p>Prueba de Certificado TLS y API</p>
-        <button onclick="probarAPI()">Comprobando Servidor</button>
+        <button onclick="probarAPI()">Probando Servidor</button>
         <div id="resultado">Esperando respuesta...</div>
     </div>
 
@@ -25,7 +25,7 @@
                 // Hacemos una petición al endpoint que creamos en Node
                 const respuesta = await fetch('/api/status');
                 const datos = await respuesta.json();
-                document.getElementById('resultado').innerText = datos.mensaje + " a las " + datos.timestamp;
+                document.getElementById('resultado').innerText = datos.mensaje + " a las " + JSON.parse(datos.timestamp);
             } catch (error) {
                 document.getElementById('resultado').innerText = "Error en la conexión";
             }
