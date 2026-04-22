@@ -7,7 +7,7 @@ async function setupDB() {
         driver: sqlite3.Database
     });
 
-    // Creamos la tabla si no existe
+    // Creamos la tabla si no existee
     await db.exec(`
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
